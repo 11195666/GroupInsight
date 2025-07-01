@@ -1,0 +1,3 @@
+# plugins/InviteTree/requirements.txt
+requests
+graphviz
