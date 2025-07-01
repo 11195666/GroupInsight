@@ -1,0 +1,53 @@
+# /plugins/GroupInsight/manifest.yaml
+
+apiVersion: v1
+kind: Plugin
+metadata:
+
+  author: 俊宏
+  name: GroupInsight
+  repository: 'https://github.com/11195666/GroupInsight'
+  version: 1.1.0
+  description: 
+    en_US: Powerful group management and relationship analysis plugin.
+    zh_Hans: 强大的群组管理与关系分析插件，支持邀请关系图、网络查询和成员管理。
+  label:
+    en_US: Group Insight
+    zh_Hans: 群洞察
+spec:
+  config:
+    - name: api_base_url
+      label:
+        zh_Hans: API 基础 URL
+        en_US: API Base URL
+      description:
+        zh_Hans: WeChatPadPro API 的基础 URL，例如 http://127.0.0.1:9090
+        en_US: The base URL for the WeChatPadPro API, e.g., http://127.0.0.1:9090
+      type: string
+      default: 'http://127.0.0.1:9090'
+      required: true
+    - name: api_key
+      label:
+        zh_Hans: API Key
+        en_US: API Key
+      description:
+        zh_Hans: 你的 WeChatPadPro API Key
+        en_US: Your WeChatPadPro API Key
+      type: string
+      default: ''
+      required: true
+    - name: admin_user_ids
+      label:
+        zh_Hans: 管理员用户ID列表，允许添加群组为管理群组。
+        en_US: Admin User ID List
+      description:
+        zh_Hans: 只有这些wxid的用户能使用插件功能，每行一个，允许添加群组为管理群组。
+        en_US: Only users with these wxids can use the plugin features. One per line.
+      type: array[string]
+      default: []
+      required: true
+
+execution:
+  python:
+    path: main.py
+    attr: GroupInsightPlugin
