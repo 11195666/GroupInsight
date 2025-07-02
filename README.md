@@ -64,19 +64,10 @@ pip install -r plugins/GroupInsight/requirements.txt
 | 功能 | 指令 | 示例 |
 | :--- | :--- | :--- |
 | **显示帮助** | `#帮助` | `#帮助` |
-| **生成关系图** | `#邀请关系` | `#邀请关系` (当前群) |
-| | `#邀请关系 <群ID>` | `#邀请关系 123@chatroom` |
-| | `#邀请关系到 <群ID>` | `#邀请关系到 456@chatroom` |
-| | `#邀请关系 <源群ID> 到 <目标群ID>` | `#邀请关系 123@chatroom 到 456@chatroom` |
-
-| **查询关系网** | `#查关系网 <成员ID>` | `#查关系网 wxid_xxxxxxxx` |
-
-| | `#查关系网 <成员ID> ` 在 ` <数据源群ID> ` | `#查关系网 wxid_xxxxxxxx ` 在 `123@chatroom` |
-| | `#查关系网 <成员ID> ` 到 ` <目标群ID> ` |`#查关系网 wxid_xxxxxxxx ` 到 `123@chatroom`  |
-| | `#查关系网 <成员ID> ` 在 ` <源群ID> `到 ` <目标群ID> `|`#查关系网 wxid_xxxxxxxx ` 在 `123@chatroom` 到 `456@chatroom`  |
+| **生成关系图** | `#邀请关系` <br> `#邀请关系 <群ID>` <br> `#邀请关系到 <群ID>` <br> `#邀请关系 <源群ID> 到 <目标群ID>` | `#邀请关系` (当前群) <br> `#邀请关系 123@chatroom` <br> `#邀请关系到 456@chatroom` <br> `#邀请关系 123@chatroom 到 456@chatroom` |
+| **查询关系网** | `#查关系网 <成员ID>` <br> `#查关系网 <成员ID> 在 <源群ID>` <br> `#查关系网 <成员ID> 到 <目标群ID>` <br> `#查关系网 <成员ID> 在 <源群ID> 到 <目标群ID>` | `#查关系网 wxid_xxx` <br> `#查关系网 wxid_xxx 在 123@chatroom` <br> `#查关系网 wxid_xxx 到 456@chatroom` <br> `#查关系网 wxid_xxx 在 123@chatroom 到 456@chatroom` |
 | **踢出成员** | `#踢人 <成员ID>` | `#踢人 wxid_xxxxxxxx` |
 | **踢出关系网 (高危)** | `#踢关系网 <成员ID>` | `#踢关系网 wxid_xxxxxxxx` |
-
 ---
 
 ### ⚠️ 重要：使用前必读
