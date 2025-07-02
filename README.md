@@ -68,7 +68,12 @@ pip install -r plugins/GroupInsight/requirements.txt
 | | `#邀请关系 <群ID>` | `#邀请关系 123@chatroom` |
 | | `#邀请关系到 <群ID>` | `#邀请关系到 456@chatroom` |
 | | `#邀请关系 <源群ID> 到 <目标群ID>` | `#邀请关系 123@chatroom 到 456@chatroom` |
+
 | **查询关系网** | `#查关系网 <成员ID>` | `#查关系网 wxid_xxxxxxxx` |
+
+| | `#查关系网 <成员ID> ` 在 ` <数据源群ID> ` | `#查关系网 wxid_xxxxxxxx ` 在 `123@chatroom` |
+| | `#查关系网 <成员ID> ` 到 ` <目标群ID> ` |`#查关系网 wxid_xxxxxxxx ` 到 `123@chatroom`  |
+| | `#查关系网 <成员ID> ` 在 ` <源群ID> `到 ` <目标群ID> `|`#查关系网 wxid_xxxxxxxx ` 在 `123@chatroom` 到 `456@chatroom`  |
 | **踢出成员** | `#踢人 <成员ID>` | `#踢人 wxid_xxxxxxxx` |
 | **踢出关系网 (高危)** | `#踢关系网 <成员ID>` | `#踢关系网 wxid_xxxxxxxx` |
 
@@ -87,3 +92,4 @@ pip install -r plugins/GroupInsight/requirements.txt
     *   **此操作不可逆！** 执行前会有一个简短的倒计时，请务必确认目标 `wxid` 是否正确，避免误操作造成无法挽回的损失。
 
 4.  **数据准确性**: 插件数据依赖于 API 返回结果。对于通过群二维码等方式入群的成员，API 可能无法提供邀请人信息，这些成员在关系图中会显示为“根节点”。
+5.  **待修复问题**：目前对于简单的星支点邀请关系无法正确渲染图片，后期再做修复。
